@@ -2,8 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import LoadingScreen from "./components/LoadingScreen";
 import "./index.css";
+import NavBar from "./components/NavBar";
+import MobileMenu from "./components/MobileMenu"
 function App() {
   const [isLoader, setIsLoader] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       {!isLoader && <LoadingScreen onComplete={() => setIsLoader(true)} />}{" "}
@@ -11,7 +14,10 @@ function App() {
         className={`min-h-screen transition-opacity duration-700 ${
           isLoader ? "opacity-100" : "opacity-0"
         } bg-black text-gray-100`}
-      ></div>
+      >
+        <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}  />
+      </div>
     </>
   );
 }
