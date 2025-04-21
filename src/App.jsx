@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import LoadingScreen from "./components/LoadingScreen";
 import NavBar from "./components/NavBar";
 import MobileMenu from "./components/MobileMenu";
@@ -26,6 +27,18 @@ function App() {
         <Projects />
         <Contact />
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 }
