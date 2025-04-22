@@ -45,6 +45,19 @@ const About = () => {
               tend to work well within a group. I am always eager to learn and
               grow in.
             </p>
+            <div className="flex justify-center mb-6">
+              <a 
+                href="https://anguyen0501.github.io/my_cv/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-700 rounded-full text-white font-medium flex items-center gap-2 hover:scale-105 transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                See my CV
+              </a>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-lg p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-700 text-center bg-clip-text text-transparent">
