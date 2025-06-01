@@ -47,18 +47,18 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center py-20"
+      className="min-h-screen flex flex-col items-center justify-center py-10 px-2 sm:py-16 md:py-20 md:px-0"
     >
       <ToastContainer
         theme="dark"
         style={{ zIndex: 9999 }}
       />
       <RevealOnScroll>
-        <div className="px-4 w-150">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+        <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:w-[50rem] px-2 sm:px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Get in touch
           </h2>
-          <form className="space-y-6" onSubmit={handelSubmit}>
+          <form className="space-y-4 sm:space-y-6" onSubmit={handelSubmit}>
             <div className="relative">
               <input
                 type="text"
@@ -66,7 +66,7 @@ const Contact = () => {
                 id="name"
                 required
                 value={formData.name || ""}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 sm:px-4 sm:py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 text-sm sm:text-base"
                 placeholder="Your Name"
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -80,7 +80,7 @@ const Contact = () => {
                 id="email"
                 value={formData.email || ""}
                 required
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 sm:px-4 sm:py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 text-sm sm:text-base"
                 placeholder="example@gmail.com"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -92,8 +92,8 @@ const Contact = () => {
                 name="message"
                 id="message"
                 value={formData.message || ""}
-                rows={5}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                rows={4}
+                className="w-full bg-white/5 border border-white/10 rounded px-3 py-2 sm:px-4 sm:py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 text-sm sm:text-base"
                 placeholder="Write your message here..."
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -102,7 +102,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer"
+              className="w-full bg-blue-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer text-sm sm:text-base"
             >
               Send Message
             </button>
